@@ -15,6 +15,7 @@ var versionCmd = &cobra.Command{
 	Short: "Print the version number of compare-files",
 	Long:  `All software has versions. This is compare-files's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("compare-files v0.1 -- HEAD")
+		fmt.Fprintf(cmd.OutOrStdout(), "compare-files v0.1 -- HEAD\n")
+		//fmt.Println("compare-files v0.1 -- HEAD")
 	},
 }
